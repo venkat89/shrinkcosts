@@ -12,17 +12,17 @@ const Hero = () => {
           <div className="flex items-center justify-center mb-6">
             <div className="flex items-center space-x-2 px-4 py-2 bg-accent/10 rounded-full border border-accent/20">
               <Sparkles className="w-4 h-4 text-accent" />
-              <span className="text-sm font-medium text-accent">Blog + Tools Platform</span>
+              <span className="text-sm font-medium text-accent">Cloud Cost Optimization</span>
             </div>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            Write, Share & 
-            <span className="bg-gradient-hero bg-clip-text text-transparent"> Build</span>
+            Optimize, Save & 
+            <span className="bg-gradient-hero bg-clip-text text-transparent"> Scale</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            The perfect platform for content creators and developers. Share your knowledge through beautiful blogs and powerful tools.
+            Reduce your cloud infrastructure costs by up to 70%. Get insights, calculators, and strategies to optimize your digital tool spending.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -30,7 +30,7 @@ const Hero = () => {
               size="lg" 
               className="bg-gradient-primary hover:shadow-glow transition-all duration-300 px-8 py-6 text-lg"
             >
-              Start Writing
+              Start Saving
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button 
@@ -38,7 +38,7 @@ const Hero = () => {
               size="lg"
               className="px-8 py-6 text-lg border-primary/20 hover:border-primary/40 hover:bg-primary/5"
             >
-              Explore Tools
+              Cost Calculators
             </Button>
           </div>
         </div>

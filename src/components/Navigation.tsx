@@ -8,7 +8,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-8">
             <div className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              BlogTools
+              ShrinkCosts
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <a 
@@ -19,18 +19,18 @@ const Navigation = () => {
                 <span>Home</span>
               </a>
               <a 
-                href="#blog" 
+                href="#insights" 
                 className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
               >
                 <BookOpen size={18} />
-                <span>Blog</span>
+                <span>Insights</span>
               </a>
               <a 
-                href="#tools" 
+                href="#calculators" 
                 className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
               >
                 <PenTool size={18} />
-                <span>Tools</span>
+                <span>Calculators</span>
               </a>
             </div>
           </div>

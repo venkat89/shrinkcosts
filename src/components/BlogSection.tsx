@@ -7,42 +7,42 @@ const BlogSection = () => {
   const posts = [
     {
       id: 1,
-      title: "Building Modern Web Applications with React and TypeScript",
-      excerpt: "Learn the best practices for creating scalable, maintainable web applications using React and TypeScript.",
-      category: "Development",
-      readTime: "8 min read",
+      title: "How TechCorp Reduced AWS Costs by 65%",
+      excerpt: "A comprehensive breakdown of strategies that helped a mid-size company save $180K annually on cloud infrastructure costs.",
+      category: "Case Study",
+      readTime: "7 min read",
       date: "Dec 15, 2024",
       featured: true
     },
     {
       id: 2,
-      title: "The Future of AI-Powered Development Tools",
-      excerpt: "Exploring how artificial intelligence is transforming the way we write code and build applications.",
-      category: "AI",
-      readTime: "6 min read",
+      title: "SaaS Subscription Audit: Hidden Savings",
+      excerpt: "Uncover overlooked subscriptions and optimize your software stack to eliminate wasteful spending on redundant tools.",
+      category: "Strategy",
+      readTime: "5 min read",
       date: "Dec 12, 2024",
       featured: false
     },
     {
       id: 3,
-      title: "Optimizing Website Performance: A Complete Guide",
-      excerpt: "Comprehensive strategies to improve your website's loading speed and user experience.",
-      category: "Performance",
-      readTime: "12 min read",
+      title: "Cloud Storage Cost Optimization",
+      excerpt: "Essential techniques for reducing storage costs across AWS S3, Google Cloud, and Azure without compromising performance.",
+      category: "Guide",
+      readTime: "6 min read",
       date: "Dec 10, 2024",
       featured: false
     }
   ];
 
   return (
-    <section id="blog" className="py-24 bg-gradient-to-br from-background to-secondary/30">
+    <section id="insights" className="py-24 bg-gradient-to-br from-background to-secondary/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Latest from the <span className="bg-gradient-primary bg-clip-text text-transparent">Blog</span>
+            Cost Optimization <span className="bg-gradient-primary bg-clip-text text-transparent">Insights</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Insights, tutorials, and thoughts on modern web development, AI, and technology trends.
+            Expert strategies, case studies, and actionable tips to reduce your cloud infrastructure and digital tool costs.
           </p>
         </div>
 

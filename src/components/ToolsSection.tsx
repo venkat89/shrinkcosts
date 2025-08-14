@@ -2,62 +2,62 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Copy, Hash, Type, FileText, ArrowRight } from "lucide-react";
+import { Calculator, Cloud, Server, TrendingDown, BarChart3, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const ToolsSection = () => {
-  const [textToHash, setTextToHash] = useState("");
-  const [hashedText, setHashedText] = useState("");
+  const [monthlySpend, setMonthlySpend] = useState("");
+  const [potentialSavings, setPotentialSavings] = useState("");
   const { toast } = useToast();
 
   const tools = [
     {
-      icon: Hash,
-      title: "Text Hash Generator",
-      description: "Generate MD5, SHA1, and SHA256 hashes from any text input.",
-      category: "Security"
+      icon: Cloud,
+      title: "AWS Cost Optimizer",
+      description: "Analyze your EC2 instances, S3 storage, and other AWS services for cost optimization opportunities.",
+      category: "Cloud"
     },
     {
-      icon: Type,
-      title: "Case Converter",
-      description: "Convert text between different cases: camelCase, snake_case, kebab-case.",
-      category: "Text"
+      icon: Server,
+      title: "SaaS Subscription Audit",
+      description: "Track and analyze all your software subscriptions to identify redundant or underutilized tools.",
+      category: "SaaS"
     },
     {
-      icon: FileText,
-      title: "JSON Formatter",
-      description: "Format, validate and beautify JSON data with syntax highlighting.",
-      category: "Development"
+      icon: TrendingDown,
+      title: "Cost Trend Analyzer",
+      description: "Monitor spending patterns and predict future costs with advanced analytics and alerts.",
+      category: "Analytics"
     }
   ];
 
-  const generateHash = async () => {
-    if (!textToHash.trim()) return;
+  const calculateSavings = () => {
+    if (!monthlySpend) return;
     
-    // Simple hash simulation (in real app, use crypto library)
-    const hash = btoa(textToHash).slice(0, 32);
-    setHashedText(hash);
+    const spend = parseFloat(monthlySpend);
+    const savings = spend * 0.35; // 35% average savings
+    const annualSavings = savings * 12;
+    setPotentialSavings(`Monthly: $${savings.toFixed(2)} | Annual: $${annualSavings.toFixed(2)}`);
   };
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
     toast({
       title: "Copied!",
-      description: "Hash copied to clipboard",
+      description: "Savings estimate copied to clipboard",
     });
   };
 
   return (
-    <section id="tools" className="py-24">
+    <section id="calculators" className="py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Developer <span className="bg-gradient-accent bg-clip-text text-transparent">Tools</span>
+            Cost <span className="bg-gradient-accent bg-clip-text text-transparent">Calculators</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Powerful utilities to streamline your development workflow and boost productivity.
+            Estimate your potential savings and optimize your cloud infrastructure and SaaS spending.
           </p>
         </div>
 
@@ -67,47 +67,44 @@ const ToolsSection = () => {
             <CardHeader>
               <CardTitle className="flex items-center space-x-3">
                 <div className="p-2 bg-gradient-primary rounded-lg">
-                  <Hash className="w-5 h-5 text-primary-foreground" />
+                  <Calculator className="w-5 h-5 text-primary-foreground" />
                 </div>
-                <span>Text Hash Generator</span>
+                <span>Cloud Cost Calculator</span>
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div>
-                <Label htmlFor="textInput">Enter your text</Label>
-                <Textarea
-                  id="textInput"
-                  placeholder="Type or paste your text here..."
-                  value={textToHash}
-                  onChange={(e) => setTextToHash(e.target.value)}
+                <Label htmlFor="spendInput">Current Monthly Spend ($)</Label>
+                <Input
+                  id="spendInput"
+                  type="number"
+                  placeholder="Enter your monthly cloud spend..."
+                  value={monthlySpend}
+                  onChange={(e) => setMonthlySpend(e.target.value)}
                   className="mt-2"
-                  rows={4}
                 />
               </div>
               
               <Button 
-                onClick={generateHash} 
+                onClick={calculateSavings} 
                 className="w-full bg-gradient-primary hover:shadow-glow transition-all duration-300"
-                disabled={!textToHash.trim()}
+                disabled={!monthlySpend}
               >
-                Generate Hash
+                Calculate Potential Savings
               </Button>
               
-              {hashedText && (
+              {potentialSavings && (
                 <div className="space-y-2">
-                  <Label>Generated Hash (MD5)</Label>
-                  <div className="flex items-center space-x-2">
-                    <Input 
-                      value={hashedText} 
-                      readOnly 
-                      className="font-mono text-sm"
-                    />
+                  <Label>Potential Savings (35% avg)</Label>
+                  <div className="p-4 bg-accent/10 rounded-lg border border-accent/20">
+                    <p className="text-lg font-semibold text-accent">{potentialSavings}</p>
                     <Button 
                       size="sm" 
                       variant="outline"
-                      onClick={() => copyToClipboard(hashedText)}
+                      onClick={() => copyToClipboard(potentialSavings)}
+                      className="mt-2"
                     >
-                      <Copy size={16} />
+                      Copy Results
                     </Button>
                   </div>
                 </div>
@@ -148,12 +145,13 @@ const ToolsSection = () => {
             
             <Card className="bg-gradient-mesh border-dashed border-2 border-primary/20">
               <CardContent className="p-8 text-center">
-                <h3 className="text-xl font-semibold mb-2">More Tools Coming Soon</h3>
+                <BarChart3 className="w-12 h-12 mx-auto mb-4 text-primary" />
+                <h3 className="text-xl font-semibold mb-2">More Calculators Coming</h3>
                 <p className="text-muted-foreground mb-4">
-                  We're constantly adding new developer tools and utilities.
+                  ROI calculators, licensing optimizers, and more cost analysis tools.
                 </p>
                 <Button variant="outline" size="sm">
-                  Request a Tool
+                  Request Calculator
                 </Button>
               </CardContent>
             </Card>
