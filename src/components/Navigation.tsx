@@ -12,31 +12,37 @@ const Navigation = () => {
             </div>
             <div className="hidden md:flex items-center space-x-6">
               <a 
-                href="#home" 
+                href="/" 
                 className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
               >
                 <Home size={18} />
                 <span>Home</span>
               </a>
               <a 
-                href="#insights" 
+                href="/blog" 
                 className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
               >
                 <BookOpen size={18} />
-                <span>Insights</span>
+                <span>Blog</span>
               </a>
               <a 
-                href="#calculators" 
+                href="/resources" 
                 className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
               >
                 <PenTool size={18} />
-                <span>Calculators</span>
+                <span>Resources</span>
+              </a>
+              <a 
+                href="/about" 
+                className="flex items-center space-x-2 text-foreground hover:text-primary transition-colors"
+              >
+                <Settings size={18} />
+                <span>About</span>
               </a>
             </div>
           </div>
-          <Button variant="outline" size="sm">
-            <Settings size={16} className="mr-2" />
-            Settings
+          <Button variant="outline" size="sm" asChild>
+            <a href="/contact">Contact</a>
           </Button>
         </div>
       </div>
