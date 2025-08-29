@@ -160,9 +160,9 @@ const ToolsSection = () => {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="small">Small (< 50 employees)</SelectItem>
-                      <SelectItem value="medium">Medium (50-500 employees)</SelectItem>
-                      <SelectItem value="large">Large (500+ employees)</SelectItem>
+                                              <SelectItem value="small">Small (&lt; 50 employees)</SelectItem>
+                        <SelectItem value="medium">Medium (50-500 employees)</SelectItem>
+                        <SelectItem value="large">Large (500+ employees)</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
