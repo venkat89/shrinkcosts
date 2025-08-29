@@ -46,7 +46,7 @@ const Hero = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center space-x-2 text-sm text-muted-foreground">
-                <CheckCircle className="w-4 h-4 text-green-600" />
+                <CheckCircle className="w-4 h-4 text-green-600 dark:text-green-400" />
                 <span>{benefit}</span>
               </div>
             ))}
@@ -75,7 +75,7 @@ const Hero = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center mb-2">
-                  <stat.icon className="w-6 h-6 text-accent mr-2" />
+                  <stat.icon className="w-6 h-6 text-green-600 dark:text-green-400 mr-2" />
                   <div className="text-2xl font-bold text-foreground">{stat.value}</div>
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>

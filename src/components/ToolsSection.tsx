@@ -160,7 +160,7 @@ const ToolsSection = () => {
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
-                                              <SelectItem value="small">Small (&lt; 50 employees)</SelectItem>
+                        <SelectItem value="small">Small (&lt; 50 employees)</SelectItem>
                         <SelectItem value="medium">Medium (50-500 employees)</SelectItem>
                         <SelectItem value="large">Large (500+ employees)</SelectItem>
                     </SelectContent>
@@ -187,16 +187,16 @@ const ToolsSection = () => {
                     <CardTitle className="text-accent">Savings Analysis</CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center p-4 bg-accent/10 rounded-lg">
-                        <div className="text-2xl font-bold text-accent">${calculationResults.breakdown.annual.toFixed(0)}</div>
-                        <div className="text-sm text-muted-foreground">Annual Savings</div>
-                      </div>
-                      <div className="text-center p-4 bg-primary/10 rounded-lg">
-                        <div className="text-2xl font-bold text-primary">{calculationResults.breakdown.roi.toFixed(1)}%</div>
-                        <div className="text-sm text-muted-foreground">ROI</div>
-                      </div>
+                                      <div className="grid grid-cols-2 gap-4">
+                    <div className="text-center p-4 bg-green-100 dark:bg-green-900/20 rounded-lg border border-green-200 dark:border-green-800">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">${calculationResults.breakdown.annual.toFixed(0)}</div>
+                      <div className="text-sm text-muted-foreground">Annual Savings</div>
                     </div>
+                    <div className="text-center p-4 bg-green-50 dark:bg-green-900/10 rounded-lg border border-green-200 dark:border-green-800">
+                      <div className="text-2xl font-bold text-green-700 dark:text-green-300">{calculationResults.breakdown.roi.toFixed(1)}%</div>
+                      <div className="text-sm text-muted-foreground">ROI</div>
+                    </div>
+                  </div>
                     
                     <div className="space-y-2">
                       <div className="flex justify-between">

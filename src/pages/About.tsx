@@ -78,10 +78,10 @@ const About = () => {
             {achievements.map((achievement, index) => (
               <Card key={index} className="text-center">
                 <CardContent className="pt-6">
-                  <div className="p-3 bg-primary/10 rounded-full w-fit mx-auto mb-4">
-                    <achievement.icon className="h-6 w-6 text-primary" />
+                  <div className="p-3 bg-green-100 dark:bg-green-900/20 rounded-full w-fit mx-auto mb-4">
+                    <achievement.icon className="h-6 w-6 text-green-600 dark:text-green-400" />
                   </div>
-                  <div className="text-2xl font-bold text-primary mb-2">{achievement.metric}</div>
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">{achievement.metric}</div>
                   <div className="text-sm text-muted-foreground">{achievement.label}</div>
                 </CardContent>
               </Card>
@@ -256,7 +256,7 @@ const About = () => {
                 <Card key={index} className="p-4">
                   <CardContent className="p-0">
                     <div className="flex items-center space-x-3">
-                      <Award className="w-5 h-5 text-primary" />
+                      <Award className="w-5 h-5 text-green-600 dark:text-green-400" />
                       <span className="text-sm font-medium">{cert}</span>
                     </div>
                   </CardContent>

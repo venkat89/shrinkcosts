@@ -150,15 +150,15 @@ const BlogSection = () => {
                 <div className="mb-6">
                   <div className="flex items-center space-x-4 text-sm">
                     <div className="flex items-center space-x-1">
-                      <DollarSign className="w-4 h-4 text-green-600" />
-                      <span className="font-semibold text-green-600">{post.metrics.savings}</span>
+                      <DollarSign className="w-4 h-4 text-green-600 dark:text-green-400" />
+                      <span className="font-semibold text-green-600 dark:text-green-400">{post.metrics.savings}</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <TrendingUp className="w-4 h-4 text-blue-600" />
-                      <span className="font-semibold text-blue-600">{post.metrics.percentage} reduction</span>
+                      <TrendingUp className="w-4 h-4 text-green-600 dark:text-green-400" />
+                      <span className="font-semibold text-green-600 dark:text-green-400">{post.metrics.percentage} reduction</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Users className="w-4 h-4 text-purple-600" />
+                      <Users className="w-4 h-4 text-amber-600 dark:text-amber-400" />
                       <span className="text-muted-foreground">{post.metrics.timeframe}</span>
                     </div>
                   </div>

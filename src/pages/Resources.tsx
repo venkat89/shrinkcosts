@@ -205,7 +205,7 @@ const Resources = () => {
                       {resource.category}
                     </Badge>
                     <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star className="w-4 h-4 fill-green-500 text-green-500" />
                       <span>{resource.rating}</span>
                     </div>
                   </div>
@@ -271,7 +271,7 @@ const Resources = () => {
                       {resource.category}
                     </Badge>
                     <div className="flex items-center space-x-1 text-sm text-muted-foreground">
-                      <Star className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star className="w-4 h-4 fill-green-500 text-green-500" />
                       <span>{resource.rating}</span>
                     </div>
                   </div>

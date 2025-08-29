@@ -113,7 +113,7 @@ const Contact = () => {
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="flex items-center justify-center mb-2">
-                  <stat.icon className="w-6 h-6 text-accent mr-2" />
+                  <stat.icon className="w-6 h-6 text-green-600 dark:text-green-400 mr-2" />
                   <div className="text-2xl font-bold text-foreground">{stat.value}</div>
                 </div>
                 <div className="text-sm text-muted-foreground">{stat.label}</div>
